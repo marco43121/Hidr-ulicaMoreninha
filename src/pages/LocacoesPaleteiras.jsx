@@ -21,7 +21,7 @@ export default function LocacoesPaleteiras(){
  <h1 style={{fontSize:"clamp(2.5rem,6vw,5rem)",fontWeight:900}}>Locação de Paleteiras</h1>
  <p style={{color:"rgba(255,255,255,.7)"}}>Equipamentos revisados e disponíveis para entrega imediata.</p>
  </div>
- <div style={{display:"grid",gridTemplateColumns":"repeat(auto-fit,minmax(300px,1fr))",gap:"24px"}}>
+ <div style={{display:"grid",gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",gap:"24px"}}>
  {items.map(item=><div key={item.id} style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,215,0,.15)",borderRadius:20,padding:24}}>
  <h3>{item.modelo_equipamento}</h3>
  <p>Tipo: {item.tipo_equipamento}</p>
