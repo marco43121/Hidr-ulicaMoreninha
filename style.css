@@ -1,0 +1,661 @@
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #ffffff; /* Fundo Branco */
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho Fixo */
+.main-header {
+    background-color: #fcfcfc; /* Azul Principal */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    max-width: 180px;
+}
+
+.logo-area img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #0b438c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffd700; /* Destaque em Amarelo */
+}
+
+.main-nav .btn-nav-whatsapp {
+    background-color: #ffd700; /* Botão Amarelo */
+    color: #0b438c;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.main-nav .btn-nav-whatsapp:hover {
+    background-color: #ffe44d;
+}
+
+/* Banner de Entrada (Hero) */
+.hero-section {
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("reparo.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #ffd700; /* Amarelo */
+}
+
+.hero-section p {
+    font-size: 1.25em;
+    margin-bottom: 35px;
+    color: #f0f4f8;
+}
+
+/* Botão Flutuante do WhatsApp */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366; /* Verde Oficial */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 32px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background-color: #20ba5a;
+}
+
+/* Conteúdo */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #0b438c;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffd700; /* Traço Amarelo abaixo do título */
+}
+
+section {
+    padding: 40px 0;
+}
+
+.about-section p {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.15em;
+    color: #555555;
+}
+
+/* Container de Serviços */
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Cards Reformulados */
+.card {
+    background-color: #f8fafc;
+    color: #333333;
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #0b438c; /* Topo azul corporativo */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 35px 25px;
+    flex: 1 1 calc(33.333% - 25px);
+    min-width: 290px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 3em;
+    color: #0b438c; /* Ícones em Azul */
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.card h3 {
+    color: #0b438c;
+    font-size: 1.15em;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.card ul li {
+    padding: 6px 0;
+    font-size: 0.95em;
+    color: #4a5568;
+    position: relative;
+    padding-left: 22px;
+}
+
+.card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ffaa00; /* Checkmark Amarelo escuro para contraste */
+    font-weight: bold;
+}
+
+/* Contatos */
+.contact-section {
+    text-align: center;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.color-whatsapp { color: #25d366; font-size: 1.5em; }
+.color-email { color: #0b438c; font-size: 1.5em; }
+
+/* Rodapé */
+.main-footer {
+    background-color: #0b438c;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Telas Menores */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* ==========================================================================
+   Nova Seção de Galeria Moderna (Cards)
+   ========================================================================== */
+
+.gallery-subtitle {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* Grid que organiza os cards de forma responsiva */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+/* Estrutura do Card */
+.gallery-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito de flutuar ao passar o mouse */
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(11, 67, 140, 0.15);
+}
+
+/* Container da Imagem - Mantém a proporção padrão (3:4) */
+.gallery-image-wrapper {
+    width: 100%;
+    height: 320px; /* Altura padrão para um visual vertical elegante */
+    overflow: hidden;
+    background-color: #f8fafc;
+    position: relative;
+}
+
+/* Força todas as imagens a cobrirem o espaço sem distorcer */
+.gallery-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta proporcionalmente */
+    object-position: center; /* Centraliza o foco do corte */
+    transition: transform 0.5s ease;
+}
+
+/* Efeito de zoom suave na imagem ao passar o mouse no card */
+.gallery-card:hover .gallery-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Conteúdo de texto do card */
+.gallery-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 3px solid #ffd700; /* Detalhe em amarelo ligando à identidade visual */
+}
+
+.gallery-card-body h3 {
+    color: #0b438c;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.gallery-card-body p {
+    color: #64748b;
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+/* =====================================================
+   TEMA PREMIUM HIDRÁULICA MORENINHA
+   COLE NO FINAL DO CSS
+===================================================== */
+
+body{
+    background:#0b111b;
+    color:#e5e7eb;
+    background-image:
+    radial-gradient(circle at top left, rgba(11,67,140,.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(255,215,0,.08), transparent 35%);
+}
+
+/* HEADER */
+
+.main-header{
+    background:rgba(11,17,27,.92);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:none;
+}
+
+.main-nav a{
+    color:#ffffff;
+    font-weight:600;
+}
+
+.main-nav a:hover{
+    color:#ffd700;
+}
+
+.main-nav .btn-nav-whatsapp{
+    background:#ffd700;
+    color:#0b111b;
+    transition:.3s;
+}
+
+.main-nav .btn-nav-whatsapp:hover{
+    transform:translateY(-2px);
+    background:#ffe44d;
+}
+
+/* HERO */
+
+.hero-section{
+    background:
+    linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+    linear-gradient(135deg,#0b438c,#07172f);
+    padding:140px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-section::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle, rgba(255,215,0,.12), transparent 70%);
+    top:-300px;
+    right:-250px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-section h1{
+    font-size:4rem;
+    font-weight:800;
+    color:#ffd700;
+    text-shadow:0 0 30px rgba(255,215,0,.25);
+}
+
+.hero-section p{
+    max-width:750px;
+    margin:25px auto 40px;
+    color:#d1d5db;
+    font-size:1.25rem;
+}
+
+/* BOTÃO WHATSAPP */
+
+.btn-whatsapp{
+    background:linear-gradient(135deg,#25d366,#1fa855);
+    border-radius:999px;
+    box-shadow:0 15px 35px rgba(37,211,102,.30);
+    transition:.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(37,211,102,.45);
+}
+
+/* TITULOS */
+
+h2{
+    color:#ffffff;
+    font-size:2.3rem;
+    font-weight:700;
+}
+
+h2::after{
+    width:90px;
+    height:5px;
+}
+
+/* SOBRE */
+
+.about-section{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:20px;
+    padding:50px;
+}
+
+.about-section p{
+    color:#cbd5e1;
+    line-height:1.9;
+}
+
+/* CARDS SERVIÇOS */
+
+.card{
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    border-top:4px solid #ffd700;
+    border-radius:18px;
+    box-shadow:none;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35),
+    0 0 20px rgba(255,215,0,.15);
+}
+
+.card-icon{
+    font-size:4rem;
+    color:#ffd700;
+}
+
+.card h3{
+    color:#ffffff;
+}
+
+.card ul li{
+    color:#cbd5e1;
+}
+
+.card ul li::before{
+    color:#ffd700;
+}
+
+/* GALERIA */
+
+.gallery-subtitle{
+    color:#cbd5e1;
+}
+
+.gallery-card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.gallery-card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.45),
+    0 0 25px rgba(11,67,140,.25);
+}
+
+.gallery-image-wrapper{
+    background:#0f172a;
+}
+
+.gallery-card-body{
+    border-top:3px solid #ffd700;
+}
+
+.gallery-card-body h3{
+    color:#ffd700;
+}
+
+.gallery-card-body p{
+    color:#cbd5e1;
+}
+
+/* CONTATO */
+
+.contact-section{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+}
+
+.contact-section p{
+    color:#cbd5e1;
+}
+
+.contact-item{
+    background:#111827;
+    color:#ffffff;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+}
+
+/* RODAPÉ */
+
+.main-footer{
+    background:#05080f;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#94a3b8;
+}
+
+/* LOGO */
+
+.logo-area img{
+    transition:.3s;
+}
+
+.logo-area img:hover{
+    transform:scale(1.03);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0b111b;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0b438c;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ffd700;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .hero-section{
+        padding:100px 20px;
+    }
+
+    .hero-section h1{
+        font-size:2.6rem;
+    }
+
+    .about-section{
+        padding:30px;
+    }
+
+}
